@@ -255,16 +255,15 @@ main h2 { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.02em; m
 .press-card:hover .press-more { text-decoration: underline; text-decoration-thickness: 2px; }
 .press-card:hover .press-cover { filter: brightness(1.08); }
 .press-cover {
-  position: relative; aspect-ratio: 16 / 9; max-width: 100%;
-  display: flex; flex-direction: column; justify-content: flex-end; gap: 0.25rem;
-  padding: 1.25rem; color: var(--mist); transition: filter 0.2s ease;
+  position: relative; aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden;
+  border-bottom: 2px solid var(--ink); transition: filter 0.2s ease;
 }
-.press-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.press-cover img { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
 .press-cover--herald { background: #1F5C6B; }
 .press-cover--samsung { background: #14306b; }
 .press-cover--nmu { background: #2f5d48; }
-.press-outlet { font-family: var(--display); font-weight: 800; font-size: var(--step-1); line-height: 1.15; color: #fff; }
-.press-date { font-size: var(--step--1); color: rgba(255,255,255,0.85); }
+.press-body .press-source { flex: none; margin: 0; font-size: var(--step--1); font-weight: 700; color: var(--harbour); line-height: 1.4; }
+.press-source time { font-weight: 400; color: var(--ink-soft); white-space: nowrap; }
 .press-body { display: flex; flex-direction: column; gap: 0.75rem; padding: 1.25rem 1.25rem 1.5rem; flex: 1; }
 .press-body h3 { font-size: var(--step-1); font-weight: 600; }
 .press-body p { color: var(--ink-soft); margin: 0; flex: 1; }
