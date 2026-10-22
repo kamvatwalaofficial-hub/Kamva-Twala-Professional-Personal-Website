@@ -11,7 +11,7 @@ index.html          page content
 styles.css          design tokens, layout, light and dark themes
 script.js           skills-by-layer diagram in the hero
 favicon.svg
-kamva-*.jpg         portrait (hero) and graduation photo (Why security)
+kamva-graduation.jpg graduation photo (Why security)
 award-*.jpg         photos for the Highlights cards
 cert-*.jpg          certificate images for Certifications and honours
 press-*.jpg         photos for the "In the media" cards (16:9, 1200×675)
@@ -30,8 +30,8 @@ Plain HTML, CSS and JavaScript, with no build step and no tracking.
 - **Certifications:** each card in `index.html` pairs a `cert-*.jpg` image with its issuer, date and
   verification link. The university email (which contains a student number) was blurred on the Cisco
   certificates before publishing; check new certificates for ID or student numbers the same way.
-- **Media cards:** each card in "In the media" uses a 16:9 photo (1200×675): `press-herald.jpg`
-  (graduation), `press-samsung.jpg` (SIC hackathon) and `press-nmu.jpg` (Eastern Cape win). The
+- **Media cards:** each card in "In the media" uses a 16:9 photo (1200×675): `press-herald.jpg` and
+  `press-samsung.jpg` (headshot) and `press-nmu.jpg` (Eastern Cape win). The
   hackathon and Eastern Cape photos keep the same blurs as their Highlights versions. If a photo is
   missing, the card falls back to a coloured cover.
 

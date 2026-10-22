@@ -98,11 +98,6 @@ main > section { max-width: var(--max); margin: 0 auto; padding: clamp(3rem, 8vw
   display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center;
   padding-top: clamp(2rem, 5vw, 4rem) !important;
 }
-.portrait {
-  display: block; width: 7.5rem; height: 7.5rem; border-radius: 50%;
-  object-fit: cover;
-  outline: 2px solid var(--ink); outline-offset: 4px; margin: 0 0 1.5rem 4px;
-}
 .hello { font-family: var(--display); font-size: var(--step-1); color: var(--harbour); margin-bottom: 0.5rem; }
 .hero h1 {
   font-size: var(--step-4); font-weight: 800; letter-spacing: -0.03em;
