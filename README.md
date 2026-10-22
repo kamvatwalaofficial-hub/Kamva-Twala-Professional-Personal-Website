@@ -1,4 +1,4 @@
-# kamvatwalaofficial-hub.github.io
+# kamvatwala.com
 
 Personal portfolio website of Kamva (Kings) Twala, a postgraduate cybersecurity student at Nelson Mandela University working towards a career in DevSecOps and secure software engineering.
 
