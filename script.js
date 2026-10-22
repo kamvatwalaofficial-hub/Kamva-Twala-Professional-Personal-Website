@@ -40,12 +40,11 @@ function select(layer, focus) {
     r.classList.toggle("inside", rIdx < idx);
   });
   const d = LAYERS[layer];
-  panel.innerHTML = "";
   const p = document.createElement("p");
   p.textContent = d.note;
   const ul = document.createElement("ul");
   d.skills.forEach(s => { const li = document.createElement("li"); li.textContent = s; ul.appendChild(li); });
-  panel.append(p, ul);
+  panel.replaceChildren(p, ul);
 }
 
 tabs.forEach(t => {
@@ -64,3 +63,11 @@ rings.forEach(r => r.addEventListener("click", () => select(r.dataset.layer)));
 
 select("code");
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Media cards: if a cover photo fails to load, remove it so the coloured cover shows instead.
+// (Kept here rather than in inline onerror attributes, which the Content Security Policy blocks.)
+document.querySelectorAll(".press-cover img").forEach(img => {
+  const drop = () => img.remove();
+  if (img.complete && img.naturalWidth === 0) drop();
+  else img.addEventListener("error", drop, { once: true });
+});

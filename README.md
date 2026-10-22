@@ -20,6 +20,21 @@ press-*.jpg         photos for the "In the media" cards (16:9, 1200×675)
 
 Plain HTML, CSS and JavaScript, with no build step and no tracking.
 
+## Security
+
+A Content Security Policy (a `<meta>` tag at the top of `index.html`) allows only this site's own
+scripts, styles and images, plus Google Fonts. Inline scripts, outside scripts and tracking pixels are
+blocked, which limits the damage if anything malicious were ever injected into the page.
+
+If you add something new, update the policy too, or the browser will block it:
+
+- **Images or files from another site:** add its address to `img-src` (or the matching directive).
+- **Embedded videos or maps:** add a `frame-src` directive for that site.
+- **Scripts:** put code in `script.js`, never in inline `<script>` tags or `onclick=` attributes.
+
+GitHub Pages does not support custom response headers, so protections that only work as headers
+(such as `frame-ancestors` against clickjacking) are not available on this host.
+
 ## Editing
 
 - **Projects, timeline, about text:** edit `index.html`.
