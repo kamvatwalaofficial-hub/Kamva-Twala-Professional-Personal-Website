@@ -8,8 +8,8 @@ Live site: https://kamvatwala.com (also reachable at https://kamvatwalaofficial-
 
 ```
 index.html          page content
-styles.css          design tokens, layout, light and dark themes
-script.js           skills-by-layer diagram in the hero
+styles.css          design tokens and layout (dark "security operations" theme)
+script.js           defence-in-depth simulation, skills filter, responsive navbar
 favicon.svg
 kamva-graduation.jpg graduation photo (Why security)
 award-*.jpg         photos for the Highlights cards
@@ -39,6 +39,8 @@ GitHub Pages does not support custom response headers, so protections that only 
 
 - **Projects, timeline, about text:** edit `index.html`.
 - **Skills in the layer diagram:** edit the `LAYERS` object at the top of `script.js`.
+- **Skills section:** edit the skill lists in `index.html` (each `<li class="skill">`); the filter and search work automatically. No proficiency levels are shown.
+- **Career roadmap:** edit the four stage cards in the Roadmap section of `index.html`.
 - **LinkedIn or email:** uncomment the lines in the Contact section of `index.html`.
 - **Highlights:** each card in `index.html` pairs an `award-*.jpg` photo with the result. Photos were
   resized and checked before publishing: other people's names and a visible Wi-Fi password were blurred.

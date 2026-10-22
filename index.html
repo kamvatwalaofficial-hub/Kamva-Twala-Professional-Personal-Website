@@ -10,26 +10,55 @@
   <meta property="og:description" content="Projects, research and leadership experience in technology and cybersecurity.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kamvatwala.com/">
+  <meta name="theme-color" content="#071216">
   <link rel="canonical" href="https://kamvatwala.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Kamva Twala, home">KT</a>
+    <a class="brand" href="#top" aria-label="Kamva Twala — home">
+      <span class="brand-badge" aria-hidden="true">KT</span>
+      <span class="brand-name">Kamva Twala</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
     <nav aria-label="Primary">
-      <ul>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#highlights">Highlights</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#path">Path</a></li>
+      <ul id="primary-nav">
+        <li class="nav-group">
+          <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="menu-about">
+            About <span class="caret" aria-hidden="true"></span>
+          </button>
+          <ul class="nav-menu" id="menu-about">
+            <li><a href="#about">Overview</a></li>
+            <li><a href="#experience">Experience</a></li>
+          </ul>
+        </li>
+        <li class="nav-group">
+          <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="menu-expertise">
+            Expertise <span class="caret" aria-hidden="true"></span>
+          </button>
+          <ul class="nav-menu" id="menu-expertise">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+          </ul>
+        </li>
+        <li class="nav-group">
+          <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="menu-work">
+            Work <span class="caret" aria-hidden="true"></span>
+          </button>
+          <ul class="nav-menu" id="menu-work">
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#highlights">Achievements</a></li>
+          </ul>
+        </li>
+        <li><a href="#roadmap">Career Goals</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -39,7 +68,7 @@
     <!-- Hero: defence in depth -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-text">
-        <p class="hello">Hi, I’m Twala.</p>
+        <p class="hello"><span class="prompt" aria-hidden="true">&gt;</span> Hi, I’m Twala.<span class="cursor" aria-hidden="true"></span></p>
         <h1 id="hero-title">Kamva Twala</h1>
         <p class="lede">Postgraduate cybersecurity student at Nelson Mandela University and project manager of SIC&nbsp;Connect, building towards technology and security leadership. I bring people, process and technology together so organisations can grow securely.</p>
         <div class="hero-actions">
@@ -49,13 +78,16 @@
       </div>
 
       <figure class="layers" aria-labelledby="layers-caption">
-        <svg class="layers-svg" viewBox="0 0 400 400" role="img" aria-labelledby="layers-svg-title">
-          <title id="layers-svg-title">Four nested security layers: people and process, infrastructure, pipeline, and code at the centre</title>
-          <g class="ring" data-layer="people"><circle cx="200" cy="200" r="190"/><text x="200" y="36">People &amp; process</text></g>
-          <g class="ring" data-layer="infra"><circle cx="200" cy="200" r="142"/><text x="200" y="84">Infrastructure</text></g>
-          <g class="ring" data-layer="pipeline"><circle cx="200" cy="200" r="94"/><text x="200" y="132">Pipeline</text></g>
-          <g class="ring" data-layer="code"><circle cx="200" cy="200" r="46"/><text x="200" y="206">Code</text></g>
-        </svg>
+        <div class="defence">
+          <canvas id="defence-canvas" width="480" height="480" role="img" aria-label="Defence in depth: four nested security layers, people and process on the outside, then infrastructure, pipeline and code at the centre. Simulated threats travel inward and are stopped at each layer."></canvas>
+          <dl class="readout" aria-hidden="true">
+            <div data-layer="people"><dt>People</dt><dd id="count-people">0</dd></div>
+            <div data-layer="infra"><dt>Infra</dt><dd id="count-infra">0</dd></div>
+            <div data-layer="pipeline"><dt>Pipeline</dt><dd id="count-pipeline">0</dd></div>
+            <div data-layer="code"><dt>Code</dt><dd id="count-code">0</dd></div>
+          </dl>
+          <p class="readout-note">Threats stopped at each layer. No single control has to be perfect when every layer catches some.</p>
+        </div>
         <figcaption id="layers-caption">
           <div class="layer-tabs" role="tablist" aria-label="Skills by security layer">
             <button role="tab" id="tab-code" aria-controls="panel" aria-selected="true" data-layer="code">Code</button>
@@ -69,7 +101,7 @@
     </section>
 
     <!-- About -->
-    <section class="about" aria-labelledby="about-title">
+    <section class="about" id="about" aria-labelledby="about-title">
       <div class="about-side">
         <h2 id="about-title">Why security</h2>
         <figure class="about-photo">
@@ -82,6 +114,144 @@
         <p>That is the idea I carry into every project: defend in layers, and make the secure path the easy path for users and developers alike.</p>
         <p>Strong security is as much about leadership as technology. It depends on clear priorities, well-run teams and decisions that make sense to the whole business. That is why I am building my technical foundation alongside experience in leading projects and people.</p>
       </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <ol class="jobs">
+        <li class="job">
+          <div class="job-head">
+            <h3>Cybersecurity Intern</h3>
+            <p class="job-org">Digital Ubuntu</p>
+            <p class="job-meta">Cybersecurity and AI seminars supported by Google.org</p>
+          </div>
+          <div class="job-body">
+            <p>Took cybersecurity out of the classroom and into the community, helping local organisations understand and reduce their risks.</p>
+            <ul class="facts">
+              <li>Visited local community organisations (LCOs) and assessed their working environments and security practices</li>
+              <li>Developed websites for the organisations</li>
+              <li>Delivered reports with practical recommendations for improving their cybersecurity</li>
+              <li>On Freedom Day, visited a public school in East London to show Grade 12 learners technology career opportunities they had not known about, broadening their options when applying for tertiary studies</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="job-head">
+            <h3>Supplemental Instruction Leader</h3>
+            <p class="job-org">Nelson Mandela University</p>
+            <p class="job-meta">Introduction to Automation, 2026</p>
+          </div>
+          <div class="job-body">
+            <p>Facilitate sessions that help students work through their course queries in a relatable way, giving a voice to students who are too shy to speak up in their Automation class.</p>
+            <ul class="facts">
+              <li>Cover Programmable Logic Controllers (PLCs), pneumatics and robotics</li>
+              <li>Balance the sessions with my postgraduate studies and the Samsung Innovation Campus programme, sharpening my time management</li>
+              <li>Strengthen my leadership and communication skills by explaining technical concepts to a varied group of students</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <p class="section-lede">A working toolkit across software development, data, cybersecurity and the teamwork needed to deliver a project. Use the filters or search to explore it.</p>
+
+      <div class="skills-controls">
+        <div class="skill-filters" role="group" aria-label="Filter skills by category">
+          <button type="button" class="skill-filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="skill-filter" data-filter="programming" aria-pressed="false">Programming</button>
+          <button type="button" class="skill-filter" data-filter="databases" aria-pressed="false">Databases</button>
+          <button type="button" class="skill-filter" data-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
+          <button type="button" class="skill-filter" data-filter="tools" aria-pressed="false">Tools</button>
+          <button type="button" class="skill-filter" data-filter="professional" aria-pressed="false">Professional</button>
+        </div>
+        <div class="skill-search">
+          <label for="skill-search-input" class="visually-hidden">Search skills</label>
+          <input type="search" id="skill-search-input" placeholder="Search skills…" autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+      <p class="skill-status visually-hidden" role="status" aria-live="polite"></p>
+
+      <div class="skill-groups">
+        <div class="skill-group" data-category="programming">
+          <h3>Programming &amp; software development</h3>
+          <ul class="skill-list">
+            <li class="skill" data-name="java">Java</li>
+            <li class="skill" data-name="c#">C#</li>
+            <li class="skill" data-name="python">Python</li>
+            <li class="skill" data-name="javascript">JavaScript</li>
+            <li class="skill" data-name="html5 css3 html css">HTML5 &amp; CSS3</li>
+            <li class="skill" data-name="react react.js reactjs">React.js</li>
+            <li class="skill" data-name="react native">React Native</li>
+            <li class="skill" data-name="asp.net core web api aspnet .net">ASP.NET Core Web API</li>
+            <li class="skill" data-name="tailwind css">Tailwind CSS</li>
+            <li class="skill" data-name="restful api rest">RESTful API development</li>
+            <li class="skill" data-name="jwt authentication role-based access control rbac">JWT auth &amp; role-based access control</li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-category="databases">
+          <h3>Databases &amp; data management</h3>
+          <ul class="skill-list">
+            <li class="skill" data-name="microsoft sql server mssql">Microsoft SQL Server</li>
+            <li class="skill" data-name="mysql">MySQL</li>
+            <li class="skill" data-name="supabase">Supabase</li>
+            <li class="skill" data-name="sqlite">SQLite</li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-category="cybersecurity">
+          <h3>Cybersecurity tools &amp; technologies</h3>
+          <p class="skill-group-note">Tools I have practised with in controlled lab environments and coursework, for defensive and educational security work.</p>
+          <ul class="skill-list skill-list--detailed">
+            <li class="skill" data-name="burp suite"><strong>Burp Suite</strong><span>Web application security testing and traffic inspection</span></li>
+            <li class="skill" data-name="nmap"><strong>Nmap</strong><span>Network discovery and port scanning for reconnaissance</span></li>
+            <li class="skill" data-name="wireshark"><strong>Wireshark</strong><span>Network traffic capture and protocol analysis</span></li>
+            <li class="skill" data-name="zphisher"><strong>Zphisher</strong><span>Phishing-awareness simulation in a controlled lab</span></li>
+            <li class="skill" data-name="spiderfoot"><strong>SpiderFoot</strong><span>OSINT and reconnaissance automation</span></li>
+            <li class="skill" data-name="recon-ng reconng"><strong>Recon-ng</strong><span>Web reconnaissance and OSINT gathering</span></li>
+            <li class="skill" data-name="openvas"><strong>OpenVAS</strong><span>Vulnerability scanning and assessment</span></li>
+            <li class="skill" data-name="social-engineer toolkit setoolkit"><strong>Social-Engineer Toolkit (SEToolkit)</strong><span>Social-engineering awareness testing in labs</span></li>
+            <li class="skill" data-name="metasploit framework msfconsole"><strong>Metasploit Framework</strong><span>Penetration testing and exploit validation (<code>msfconsole</code>)</span></li>
+            <li class="skill" data-name="john the ripper"><strong>John the Ripper</strong><span>Password-strength auditing in assessments</span></li>
+            <li class="skill" data-name="steghide"><strong>Steghide</strong><span>Steganography: hiding and extracting data in files</span></li>
+            <li class="skill" data-name="cisco packet tracer"><strong>Cisco Packet Tracer</strong><span>Network and IoT simulation and configuration</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-category="tools">
+          <h3>Development, data science &amp; collaboration tools</h3>
+          <p class="skill-group-note">I use PyCharm and Anaconda, including Jupyter Notebook, for my Python programming.</p>
+          <ul class="skill-list">
+            <li class="skill" data-name="visual studio">Visual Studio</li>
+            <li class="skill" data-name="visual studio code vs code vscode">Visual Studio Code</li>
+            <li class="skill" data-name="pycharm python">PyCharm</li>
+            <li class="skill" data-name="anaconda python">Anaconda</li>
+            <li class="skill" data-name="jupyter notebook python">Jupyter Notebook</li>
+            <li class="skill" data-name="android studio">Android Studio</li>
+            <li class="skill" data-name="netbeans">NetBeans</li>
+            <li class="skill" data-name="git github">Git &amp; GitHub</li>
+          </ul>
+        </div>
+
+        <div class="skill-group" data-category="professional">
+          <h3>Professional &amp; leadership skills</h3>
+          <ul class="skill-list">
+            <li class="skill" data-name="team collaboration">Team collaboration</li>
+            <li class="skill" data-name="project management">Project management</li>
+            <li class="skill" data-name="problem-solving problem solving">Problem-solving</li>
+            <li class="skill" data-name="analytical thinking">Analytical thinking</li>
+            <li class="skill" data-name="technical communication">Technical communication</li>
+            <li class="skill" data-name="research critical thinking">Research &amp; critical thinking</li>
+            <li class="skill" data-name="presentation skills">Presentation skills</li>
+            <li class="skill" data-name="leadership teamwork">Leadership &amp; teamwork</li>
+          </ul>
+        </div>
+      </div>
+      <p class="skill-empty" hidden>No skills match your search. <button type="button" class="link-btn" id="skill-clear">Clear search</button></p>
     </section>
 
     <!-- Work -->
@@ -289,15 +459,57 @@
       </ol>
     </section>
 
+    <!-- Roadmap -->
+    <section class="roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <h2 id="roadmap-title">Career roadmap</h2>
+      <p class="section-lede">I’m in the early stages of my career. My long-term ambition is to grow into executive technology or information security leadership — as a <strong>Chief Information Officer (CIO)</strong> or a <strong>Chief Information Security Officer (CISO)</strong>. These are two possible long-term paths, not roles I expect to step into immediately, and my specialisation will develop as I gain industry experience.</p>
+      <ol class="stages">
+        <li class="stage">
+          <span class="stage-num">Stage 1</span>
+          <h3>Build the foundation</h3>
+          <ul class="facts">
+            <li>Pursue internships, graduate programmes and entry-level roles in IT, software development, cybersecurity or IT support</li>
+            <li>Gain practical experience, strengthen my technical skills and learn from experienced professionals</li>
+            <li>Apply my academic knowledge to real-world challenges</li>
+          </ul>
+        </li>
+        <li class="stage">
+          <span class="stage-num">Stage 2</span>
+          <h3>Develop a specialisation</h3>
+          <ul class="facts">
+            <li>Build deeper expertise in a suitable area of technology or cybersecurity</li>
+            <li>Earn relevant industry certifications and pursue professional development</li>
+            <li>Understand how technology, risk, security and business objectives work together</li>
+          </ul>
+        </li>
+        <li class="stage">
+          <span class="stage-num">Stage 3</span>
+          <h3>Progress into senior roles</h3>
+          <ul class="facts">
+            <li>Take on greater responsibility, lead projects and mentor colleagues</li>
+            <li>Develop strategic decision-making skills</li>
+            <li>Build experience in technology operations, information security, governance, risk management and team leadership</li>
+          </ul>
+        </li>
+        <li class="stage stage--goal">
+          <span class="stage-num">Stage 4</span>
+          <h3>Aspire to executive leadership</h3>
+          <ul class="facts">
+            <li>As a <strong>CIO</strong>: align technology strategy with organisational goals</li>
+            <li>Or as a <strong>CISO</strong>: lead information security strategy, governance and risk</li>
+            <li>A long-term ambition that needs sustained experience, leadership development and continuous learning</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
     <!-- Contact -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <h2 id="contact-title">Let’s talk</h2>
       <p>I’m open to graduate roles and programmes in IT, information security and application support, where I can build a strong foundation for technology and security leadership.</p>
       <ul class="contact-links">
         <li><a href="https://github.com/kamvatwalaofficial-hub" rel="noopener">GitHub</a></li>
-        <!-- Add your LinkedIn URL, then remove the comment markers:
-        <li><a href="https://www.linkedin.com/in/YOUR-PROFILE" rel="noopener">LinkedIn</a></li>
-        -->
+        <li><a href="https://www.linkedin.com/in/kamva-twala-37b283252" rel="noopener">LinkedIn</a></li>
         <!-- Add a professional email if you want one shown:
         <li><a href="mailto:you@example.com">Email</a></li>
         -->
