@@ -13,8 +13,8 @@ const LAYERS = {
     skills: ["Linux command line", "Kali Linux", "Penetration testing practice", "FIDO2 / WebAuthn"]
   },
   people: {
-    note: "The humans who build and use it",
-    skills: ["Project management", "UX wireframing", "Security awareness", "Teaching and mentoring"]
+    note: "Leading the people and decisions that keep it secure",
+    skills: ["Project leadership", "Information security management", "Security awareness", "Teaching and mentoring", "UX wireframing"]
   }
 };
 const ORDER = ["code", "pipeline", "infra", "people"];
