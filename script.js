@@ -359,3 +359,78 @@ document.getElementById("year").textContent = new Date().getFullYear();
   if (clear) clear.addEventListener("click", () => { search.value = ""; search.focus(); apply(); });
   apply();
 })();
+
+// ------------------------------------------------------------------ journey timeline
+(function journey() {
+  const section = document.getElementById("path");
+  if (!section) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const line = section.querySelector(".journey-line");
+  // Only now may the CSS hide cards for their entrance. If this script is missing or
+  // out of date, the class never appears and the whole timeline simply shows.
+  section.classList.add("is-animated");
+
+  // Scroll-reveal: stations, cards and the closing card fade in and light up their nodes.
+  const revealables = section.querySelectorAll(".tl-event, .tl-year-head, .journey-continues");
+  if (!reduce && "IntersectionObserver" in window) {
+    const ro = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.15 });
+    revealables.forEach(el => ro.observe(el));
+  } else {
+    revealables.forEach(el => el.classList.add("is-visible"));
+  }
+
+  // The spine fills as the reader scrolls through the journey.
+  if (line) {
+    if (reduce) {
+      line.style.setProperty("--progress", "1");
+    } else {
+      let ticking = false;
+      const update = () => {
+        ticking = false;
+        const r = line.getBoundingClientRect();
+        const reach = window.innerHeight * 0.6 - r.top;
+        const p = Math.max(0, Math.min(1, reach / r.height));
+        line.style.setProperty("--progress", p.toFixed(4));
+      };
+      const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      section.addEventListener("toggle", onScroll, true); // opening a card changes the line's length
+      update();
+    }
+  }
+
+  // Clicking anywhere on a card's heading area opens or closes its story.
+  // (The "Read more" summary stays the keyboard-accessible control.)
+  section.querySelectorAll(".tl-card").forEach(card => {
+    const head = card.querySelector(".tl-card-head");
+    const more = card.querySelector(".tl-more");
+    if (!head || !more) return;
+    head.addEventListener("click", () => {
+      if (window.getSelection && String(window.getSelection()).length) return; // don't fight text selection
+      more.open = !more.open;
+    });
+  });
+
+  // Count the headline numbers up once they come into view.
+  const nums = section.querySelectorAll(".stat-num[data-count]");
+  if (!reduce && "IntersectionObserver" in window && nums.length) {
+    nums.forEach(n => { n.textContent = "0"; });
+    const co = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        obs.unobserve(e.target);
+        const el = e.target, target = parseInt(el.dataset.count, 10), start = performance.now(), dur = 900;
+        const tick = now => {
+          const k = Math.min(1, (now - start) / dur);
+          el.textContent = String(Math.round(target * (1 - Math.pow(1 - k, 3))));
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    nums.forEach(n => co.observe(n));
+  }
+})();

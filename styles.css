@@ -364,7 +364,7 @@ main h2::after {
 
 /* the spine: a dim track, plus a glowing fill that follows the reader's scroll */
 .journey-line { --progress: 1; list-style: none; margin: 0; padding: 0; position: relative; }
-.js .journey-line { --progress: 0; }
+.journey.is-animated .journey-line { --progress: 0; }
 .journey-line::before, .journey-line::after {
   content: ""; position: absolute; left: 1.6rem; top: 0.4rem; bottom: 1.5rem; width: 2px; margin-left: -1px; border-radius: 2px; }
 .journey-line::before { background: var(--line); }
@@ -380,7 +380,7 @@ main h2::after {
   border: 2px solid var(--scan); box-shadow: 0 0 0 5px var(--bg);
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
 .tl-year--major .tl-year-num { background: var(--signal); border-color: var(--signal); box-shadow: 0 0 0 5px var(--bg), 0 0 18px rgba(242, 179, 61, 0.55); }
-.js .tl-year-head:not(.is-visible) .tl-year-num { background: var(--bg); color: var(--ink-soft); border-color: var(--line); box-shadow: 0 0 0 5px var(--bg); }
+.journey.is-animated .tl-year-head:not(.is-visible) .tl-year-num { background: var(--bg); color: var(--ink-soft); border-color: var(--line); box-shadow: 0 0 0 5px var(--bg); }
 .tl-year-head.is-visible .tl-year-num { animation: station-pop 0.55s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
 .tl-year-text h3 { font-size: var(--step-2); font-weight: 700; margin: 0 0 0.15rem; }
 .tl-year-lede { color: var(--ink-soft); margin: 0; max-width: 62ch; }
@@ -392,7 +392,7 @@ main h2::after {
   border-radius: 50%; background: var(--surface-2); border: 2px solid var(--scan); color: var(--scan); box-shadow: 0 0 0 4px var(--bg);
   transition: border-color 0.4s ease, color 0.4s ease, background-color 0.4s ease; }
 .tl-node svg { width: 1.05rem; height: 1.05rem; }
-.js .tl-event:not(.is-visible) .tl-node { border-color: var(--line); color: var(--ink-soft); background: var(--bg); }
+.journey.is-animated .tl-event:not(.is-visible) .tl-node { border-color: var(--line); color: var(--ink-soft); background: var(--bg); }
 .tl-event.is-visible .tl-node { animation: node-pop 0.5s cubic-bezier(0.2, 1.5, 0.4, 1) both; }
 .tl-event.is-visible .tl-node::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; border: 2px solid var(--scan);
   animation: ripple 0.9s ease-out 0.15s both; pointer-events: none; }
@@ -413,7 +413,7 @@ main h2::after {
 .tl-event--current .tl-card::before { background: var(--signal); transform: scaleY(1); }
 
 .tl-card-head { padding: 1.05rem 1.25rem 0; }
-.js .tl-card-head { cursor: pointer; }
+.journey.is-animated .tl-card-head { cursor: pointer; }
 .tl-tag { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--scan); }
 .tl-event--current .tl-tag { color: var(--signal); }
 .tl-current { display: flex; width: fit-content; margin: 0.5rem 0 0.15rem; align-items: center; gap: 0.4rem; font-family: var(--mono); font-size: 0.68rem; font-weight: 700;
@@ -529,10 +529,10 @@ main h2::after {
 .journey-continues.is-visible .flow > li:nth-child(5) { animation-delay: 0.48s; }
 
 /* scroll-reveal (only when JS is on) */
-.js .tl-event, .js .tl-year-head, .js .journey-continues { opacity: 0; transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1); }
-.js .tl-event { transform: translateX(20px); }
-.js .tl-year-head, .js .journey-continues { transform: translateY(18px); }
-.js .tl-event.is-visible, .js .tl-year-head.is-visible, .js .journey-continues.is-visible { opacity: 1; transform: none; }
+.journey.is-animated .tl-event, .journey.is-animated .tl-year-head, .journey.is-animated .journey-continues { opacity: 0; transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.journey.is-animated .tl-event { transform: translateX(20px); }
+.journey.is-animated .tl-year-head, .journey.is-animated .journey-continues { transform: translateY(18px); }
+.journey.is-animated .tl-event.is-visible, .journey.is-animated .tl-year-head.is-visible, .journey.is-animated .journey-continues.is-visible { opacity: 1; transform: none; }
 
 @keyframes station-pop { 0% { transform: scale(0.6); } 100% { transform: scale(1); } }
 @keyframes node-pop { 0% { transform: scale(0.5); } 100% { transform: scale(1); } }
@@ -558,7 +558,7 @@ main h2::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js .tl-event, .js .tl-year-head, .js .journey-continues { opacity: 1; transform: none; transition: none; }
+  .journey.is-animated .tl-event, .journey.is-animated .tl-year-head, .journey.is-animated .journey-continues { opacity: 1; transform: none; transition: none; }
   .journey *, .journey *::before, .journey *::after { animation: none !important; transition: none !important; }
 }
 
