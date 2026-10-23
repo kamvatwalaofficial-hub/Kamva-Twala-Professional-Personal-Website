@@ -40,15 +40,7 @@
             <li><a href="#experience">Experience</a></li>
           </ul>
         </li>
-        <li class="nav-group">
-          <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="menu-expertise">
-            Expertise <span class="caret" aria-hidden="true"></span>
-          </button>
-          <ul class="nav-menu" id="menu-expertise">
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-          </ul>
-        </li>
+        <li><a href="#skills">Skills</a></li>
         <li class="nav-group">
           <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="menu-work">
             Work <span class="caret" aria-hidden="true"></span>
@@ -56,9 +48,18 @@
           <ul class="nav-menu" id="menu-work">
             <li><a href="#work">Projects</a></li>
             <li><a href="#highlights">Achievements</a></li>
+            <li><a href="#certifications">Certifications</a></li>
           </ul>
         </li>
-        <li><a href="#roadmap">Career Goals</a></li>
+        <li class="nav-group">
+          <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="menu-goals">
+            Career <span class="caret" aria-hidden="true"></span>
+          </button>
+          <ul class="nav-menu" id="menu-goals">
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#why-me">Why me?</a></li>
+          </ul>
+        </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -110,9 +111,8 @@
         </figure>
       </div>
       <div class="prose">
-        <p>I started writing Java in NetBeans in Grade 10 and have been building things ever since. Security became personal when I saw how a single hijacked social media account could be turned against everyone in its contact list. One weak point was enough to reach dozens of people.</p>
-        <p>That is the idea I carry into every project: defend in layers, and make the secure path the easy path for users and developers alike.</p>
-        <p>Strong security is as much about leadership as technology. It depends on clear priorities, well-run teams and decisions that make sense to the whole business. That is why I am building my technical foundation alongside experience in leading projects and people.</p>
+        <p>Cybercrime hurts differently when it targets someone I love. My grandmother’s WhatsApp account was hijacked, and a stranger impersonated her to scam her friends and fellow grandmothers. Stopping the attacker meant blocking her number &mdash; which also cut her off from her banking, her church community and the people she most wanted to warn.</p>
+        <p>That showed me the real stakes: behind every compromised account is a person and a life that can be disrupted. It is why I design in layers, work to make the secure path the easy path, and treat security as much a matter of leadership as of technology &mdash; the foundation I am building towards a CIO or CISO role.</p>
       </div>
     </section>
 
@@ -129,8 +129,8 @@
           <div class="job-body">
             <p>Took cybersecurity out of the classroom and into the community, helping local organisations understand and reduce their risks.</p>
             <ul class="facts">
-              <li>Visited local community organisations (LCOs) and assessed their working environments and security practices</li>
-              <li>Developed websites for the organisations</li>
+              <li>Visited local community organisations (LCOs) in Gqeberha and assessed their working environments and security practices</li>
+              <li>Built websites for the organisations that had no official website or digital presence, giving them an online presence to reach a wider audience, attract funders and make their community impact known to people who did not know they existed</li>
               <li>Delivered reports with practical recommendations for improving their cybersecurity</li>
               <li>On Freedom Day, visited a public school in East London to show Grade 12 learners technology career opportunities they had not known about, broadening their options when applying for tertiary studies</li>
             </ul>
@@ -251,7 +251,7 @@
           </ul>
         </div>
       </div>
-      <p class="skill-empty" hidden>No skills match your search. <button type="button" class="link-btn" id="skill-clear">Clear search</button></p>
+      <p class="skill-empty" hidden>No skills match that search. <button type="button" class="link-btn" id="skill-clear">Clear search</button></p>
     </section>
 
     <!-- Work -->
@@ -444,19 +444,303 @@
       </ul>
     </section>
 
-    <!-- Path -->
-    <section class="path" id="path" aria-labelledby="path-title">
-      <h2 id="path-title">Path so far</h2>
-      <ol class="timeline">
-        <li><span class="when">Grade 10</span><div><h3>First lines of code</h3><p>Learnt Java in NetBeans and discovered I enjoyed building software.</p></div></li>
-        <li><span class="when">SIC</span><div><h3>Samsung Innovation Campus</h3><p>Member of the inaugural cohort at Nelson Mandela University.</p></div></li>
-        <li><span class="when">2026</span><div><h3>Postgraduate Diploma in Cybersecurity</h3><p>Nelson Mandela University: information security management, ethical hacking, cyber safety and research.</p></div></li>
-        <li><span class="when">Mar 2026</span><div><h3>Winner, MICT SETA National Skills Challenge (Eastern Cape)</h3><p>Part of the five-student team that won the provincial leg, earning R100,000 and a place in the national finals.</p></div></li>
-        <li><span class="when">Mar 2026</span><div><h3>2nd place, MICT SETA National Skills Challenge grand finale</h3><p>Our team, Fifth Dimension, placed second nationally in Johannesburg, winning R50,000.</p></div></li>
-        <li><span class="when">Jul 2026</span><div><h3>Second place, SIC hackathon</h3><p>Led the SIC Connect team as project manager and team leader, and pitched our alumni platform to Samsung and industry experts.</p></div></li>
-        <li><span class="when">2026</span><div><h3>Supplemental Instruction Leader</h3><p>Run sessions for Introduction to Automation, helping students work through concepts and questions.</p></div></li>
-        <li><span class="when">2027</span><div><h3>Deputy Events Manager, Computer Society</h3><p>Incoming member of the Computer Society Executive Committee.</p></div></li>
-      </ol>
+    <!-- Journey -->
+    <section class="journey" id="path" aria-labelledby="journey-title">
+      <h2 id="journey-title">My journey so far</h2>
+      <p class="section-lede">From my first lines of Java code in 2020 to software development, national innovation competitions, leadership, and cybersecurity in 2026.</p>
+      <ul class="journey-stats"><li><strong class="stat-num" data-count="7">7</strong><span>years of building</span></li><li><strong class="stat-num" data-count="16">16</strong><span>milestones</span></li><li><strong class="stat-num" data-count="3">3</strong><span>competition podiums</span></li></ul>
+      <p class="journey-hint">Select any milestone to read the full story.</p>
+      <div class="journey-main">
+        <ol class="journey-line">
+          <li class="tl-year" id="journey-2020">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2020</span>
+    <div class="tl-year-text"><h3>Where it all began</h3><p class="tl-year-lede">Grade 10, and my first encounter with programming.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone</span>
+      <h4>My first experience with IT</h4>
+      <p class="tl-hook">Grade 10. Java. NetBeans. A steep learning curve.</p>
+      <ul class="tl-badges"><li class="badge badge--neutral">Top 3 IT student &middot; Grades 10&ndash;12</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In Grade 10 I was introduced to programming and began learning Java in NetBeans. My first month was difficult: the syntax and logic felt overwhelming, and I struggled to turn ideas into working code. Giving up was never an option.</p><p>I gave up weekends I could have spent with friends and family to practise, understand the syntax and strengthen my problem-solving. That persistence paid off: I went from struggling with the basics to being one of the top three IT students in Grades 10, 11 and 12, and I began to recognise that programming might be one of my strengths.</p><figure class="tl-diagram"><figcaption>My first Java program, in NetBeans</figcaption><pre class="code-snip"><code>public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello, world");
+  }
+}</code></pre></figure><figure class="tl-diagram"><figcaption>How that year turned around</figcaption><ol class="flow"><li>Overwhelmed by syntax</li><li>Weekends of practice</li><li>Top 3 IT student</li></ol></figure></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+<li class="tl-year" id="journey-2021">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2021</span>
+    <div class="tl-year-text"><h3>Turning persistence into progress</h3><p class="tl-year-lede">Consolidating the basics and growing in confidence.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 20v-4"/><path d="M12 20v-9"/><path d="M17 20v-13"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Growth</span>
+      <h4>Building my programming foundation</h4>
+      <p class="tl-hook">From learning syntax to writing programs with confidence.</p>
+      
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>I kept building on the Java and problem-solving foundation from 2020. This was a year of steady consolidation rather than a single headline project: the groundwork that every later project would stand on.</p><figure class="tl-diagram"><figcaption>What grew that year</figcaption><ol class="flow"><li>Syntax</li><li>Programming logic</li><li>Confident programs</li></ol></figure></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+<li class="tl-year" id="journey-2022">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2022</span>
+    <div class="tl-year-text"><h3>My first IT project</h3><p class="tl-year-lede">Grade 12: my first real project, and matriculating in IT.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l1.6-4.7A2 2 0 0 1 8.5 7h7a2 2 0 0 1 1.9 1.3L19 13"/><path d="M4 13h16v4H4z"/><circle cx="7.5" cy="17.5" r="1.4"/><circle cx="16.5" cy="17.5" r="1.4"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone &middot; first project</span>
+      <h4>Building a car rental management system</h4>
+      <p class="tl-hook">My first project, built around something I love: cars.</p>
+      <ul class="tl-badges"><li class="badge badge--gold">75% &middot; Matric IT</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In Grade 12 I challenged myself to build my first IT project, a car rental management system. My programming knowledge was largely limited to CRUD operations (creating, reading, updating and deleting data), so I used exactly those skills on something I genuinely enjoy. As a huge petrol head, it let me connect my interest in cars with my growing passion for programming.</p><ul class="facts"><li>My first independent IT project</li><li>Early hands-on experience with CRUD operations</li><li>Applied classroom knowledge to a real-world business scenario</li></ul><figure class="tl-diagram"><figcaption>What the system managed</figcaption><ol class="flow"><li>Vehicle inventory</li><li>Rental bookings</li><li>Records: create, read, update, delete</li></ol></figure><figure class="tl-diagram"><figcaption>Final matric result for IT</figcaption><div class="meter" role="img" aria-label="Information Technology, 2022: 75%"><div class="meter-track"><div class="meter-fill meter-fill--75"></div></div><div class="meter-label"><span>Information Technology, 2022</span><strong>75%</strong></div></div></figure><p class="tl-note">An early academic project built to learn; its original technology stack isn&rsquo;t recorded here.</p></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+<li class="tl-year" id="journey-2023">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2023</span>
+    <div class="tl-year-text"><h3>Beginning my university journey</h3><p class="tl-year-lede">First year of a Bachelor of Information Technology at Nelson Mandela University.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5Z"/><path d="M6 11.5V16c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-4.5"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone</span>
+      <h4>Bachelor of Information Technology</h4>
+      <p class="tl-hook">First year at Nelson Mandela University, and an invitation to Golden Key.</p>
+      <ul class="tl-badges"><li class="badge badge--neutral">Golden Key invitation</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>I began my Bachelor of Information Technology at Nelson Mandela University in 2023. My academic performance earned me an invitation to the Golden Key International Honour Society. Financial constraints meant I could not join straight away; I was eventually able to afford membership and joined in 2026.</p><figure class="tl-diagram"><figcaption>The Golden Key story</figcaption><ol class="flow"><li>Invited &middot; 2023</li><li>Financial constraints</li><li>Joined &middot; 2026</li></ol></figure></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+<li class="tl-year" id="journey-2024">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2024</span>
+    <div class="tl-year-text"><h3>Full-stack development and design</h3><p class="tl-year-lede">Second year: from single programs to full systems, and my first taste of UX design.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="m2 13 10 5 10-5"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone &middot; full-stack</span>
+      <h4>My first full-stack Learner Management System</h4>
+      <p class="tl-hook">Frontend, backend and database, working together for the first time.</p>
+      <ul class="tl-badges"><li class="badge badge--neutral">React</li><li class="badge badge--neutral">ASP.NET Core</li><li class="badge badge--neutral">SQL Server</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In my second year I built my first full-stack web application, a Learner Management System. It moved me beyond basic programming and showed me how frontend interfaces, backend APIs and databases work together.</p><figure class="tl-diagram"><figcaption>Architecture</figcaption><ol class="arch"><li><span class="arch-layer">Frontend</span><span class="arch-tech">React.js + Tailwind CSS</span></li><li><span class="arch-layer">Backend</span><span class="arch-tech">Node.js and ASP.NET Core Web API (C#)</span></li><li><span class="arch-layer">Database</span><span class="arch-tech">Microsoft SQL Server</span></li></ol></figure><figure class="tl-diagram"><figcaption>How a request travels</figcaption><ol class="flow"><li>React.js + Tailwind CSS</li><li>ASP.NET Core Web API</li><li>Microsoft SQL Server</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone &middot; design</span>
+      <h4>My first high-fidelity Figma prototype</h4>
+      <p class="tl-hook">A movie app prototype with two user journeys.</p>
+      <ul class="tl-badges"><li class="badge badge--neutral">Figma</li><li class="badge badge--neutral">Prototype</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>I learned Figma by designing a high-fidelity prototype for a movie application. Users could choose between paying to stream a movie online or buying a cinema ticket online; the ticket journey ended with a QR code for entry to a local cinema. It introduced me to user-centred design, interface prototyping and designing around different user journeys.</p><figure class="tl-diagram"><figcaption>Two user journeys</figcaption><ol class="flow flow--branch"><li>Choose a movie</li><li class="flow-split"><span>Stream online</span><span>Buy cinema ticket &rarr; Receive QR code</span></li></ol></figure><p class="tl-note">A design prototype, not a deployed streaming service.</p></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+<li class="tl-year" id="journey-2025">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2025</span>
+    <div class="tl-year-text"><h3>Building more complex solutions</h3><p class="tl-year-lede">Final year: mobile development, a team-built system, teaching, and a first step into cybersecurity.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone &middot; mobile</span>
+      <h4>My first full-stack mobile application</h4>
+      <p class="tl-hook">From the web to Android.</p>
+      <ul class="tl-badges"><li class="badge badge--neutral">Java</li><li class="badge badge--neutral">Android Studio</li><li class="badge badge--neutral">SQLite</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In my final year I developed my first full-stack mobile application, a Learner Management System, extending my experience from web applications to mobile development.</p><figure class="tl-diagram"><figcaption>Architecture</figcaption><ol class="arch"><li><span class="arch-layer">App</span><span class="arch-tech">Android application (Java, Android Studio)</span></li><li><span class="arch-layer">Logic</span><span class="arch-tech">Application logic</span></li><li><span class="arch-layer">Database</span><span class="arch-tech">SQLite</span></li></ol></figure><figure class="tl-diagram"><figcaption>Data flow</figcaption><ol class="flow"><li>Android application</li><li>Application logic</li><li>SQLite database</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="1"/><path d="M4 12h16"/><path d="M12 8v12"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Team project</span>
+      <h4>Procura: inventory management system</h4>
+      <p class="tl-hook">Four of us, one system for retail stock. Final mark: 83%.</p>
+      <ul class="tl-badges"><li class="badge badge--gold">83% &middot; Procura</li><li class="badge badge--role">Team of 4</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>With three classmates I developed Procura, a full-stack inventory management system to help retailers manage stock across multiple shops in South Africa. It helps them track inventory, request replenishment before stock runs out, and monitor deliveries.</p><figure class="tl-diagram"><figcaption>Who Procura serves</figcaption><div class="hub"><span class="hub-core">Procura</span><ul class="hub-spokes"><li>Retail shop managers monitor branch stock and request restocks</li><li>Warehouse managers manage restock orders and assign drivers</li><li>Truck drivers deliver restock orders</li><li>Administrators monitor the overall system</li></ul></div></figure><figure class="tl-diagram"><figcaption>The restock loop</figcaption><ol class="flow flow--cycle"><li>Shop requests restock</li><li>Warehouse assigns a driver</li><li>Driver delivers</li><li>Branch stock tracked</li></ol></figure><figure class="tl-diagram"><figcaption>Architecture</figcaption><ol class="arch"><li><span class="arch-layer">Frontend</span><span class="arch-tech">React.js</span></li><li><span class="arch-layer">Backend</span><span class="arch-tech">ASP.NET Core Web API</span></li><li><span class="arch-layer">Database</span><span class="arch-tech">Microsoft SQL Server</span></li></ol></figure><figure class="tl-diagram"><figcaption>Final project mark</figcaption><div class="meter" role="img" aria-label="Procura: 83%"><div class="meter-track"><div class="meter-fill meter-fill--83"></div></div><div class="meter-label"><span>Procura</span><strong>83%</strong></div></div></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M19 20a6 6 0 0 0-3-5.2"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Resilience</span>
+      <h4>From struggling student to SI Leader candidate</h4>
+      <p class="tl-hook">The module I once failed became the one I was chosen to teach.</p>
+      <ul class="tl-badges"><li class="badge badge--role">Selected &middot; SI Leader</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In my second year I struggled with Introduction to Automation and initially failed it. I repeated the module in my final year and improved enough to become one of the top two students in the class. In 2025 I applied to become a Supplemental Instruction (SI) Leader for that same module, and I was selected.</p><figure class="tl-diagram"><figcaption>The turnaround</figcaption><ol class="flow"><li>Failed the module</li><li>Repeated it</li><li>Top two in class</li><li>Selected as SI Leader</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4 3 7 7 8 4-1 7-4 7-8V6l-7-3Z"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Cybersecurity</span>
+      <h4>Digital Ubuntu: Cybersecurity / AI Seminars</h4>
+      <p class="tl-hook">Selected for the initiative, and trained in cybersecurity.</p>
+      <ul class="tl-badges"><li class="badge badge--role">Selected &middot; Digital Ubuntu</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>I applied for and was selected for the Digital Ubuntu: Cybersecurity / AI Seminars internship initiative, and attended cybersecurity training in September 2025. The practical phase was planned to run from December 2025 to the end of March 2026, after my studies for the year, visiting and assessing local community organisations (LCOs) in Gqeberha.</p><figure class="tl-diagram"><figcaption>The programme plan</figcaption><ol class="flow"><li>Selected</li><li>Training &middot; Sep 2025</li><li>Planned practical phase &middot; Dec 2025&ndash;Mar 2026</li></ol></figure></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+<li class="tl-year tl-year--major" id="journey-2026">
+  <div class="tl-year-head">
+    <span class="tl-year-num">2026</span>
+    <div class="tl-year-text"><h3>Innovation, leadership and cybersecurity</h3><p class="tl-year-lede">My biggest year yet: graduation, national competitions, leading a team, and the start of my cybersecurity specialisation.</p></div>
+  </div>
+  <ol class="tl-events">
+    <li class="tl-event tl-event--major">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5Z"/><path d="M6 11.5V16c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-4.5"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Milestone &middot; graduation</span>
+      <h4>Graduating with my BIT degree</h4>
+      <p class="tl-hook">April 2026: undergraduate chapter complete.</p>
+      <ul class="tl-badges"><li class="badge badge--gold">BIT &middot; 73% overall</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In April 2026 I graduated from Nelson Mandela University with a Bachelor of Information Technology, with an overall average of 73%. It completed my undergraduate journey and opened a more focused path into cybersecurity.</p><figure class="tl-diagram"><figcaption>Overall average</figcaption><div class="meter" role="img" aria-label="Bachelor of Information Technology: 73%"><div class="meter-track"><div class="meter-fill meter-fill--73"></div></div><div class="meter-label"><span>Bachelor of Information Technology</span><strong>73%</strong></div></div></figure><figure class="tl-diagram"><figcaption>Undergraduate journey</figcaption><ol class="flow"><li>Started BIT &middot; 2023</li><li>Full-stack &amp; design &middot; 2024</li><li>Mobile &amp; team systems &middot; 2025</li><li>Graduated &middot; 2026</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event tl-event--major">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="4"/><path d="m11 11 8 8"/><path d="m16.5 16.5 2-2"/><path d="m19 19 2-2"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Academic milestone</span>
+      <h4>Joining Golden Key</h4>
+      <p class="tl-hook">An invitation from 2023, accepted in 2026.</p>
+      <ul class="tl-badges"><li class="badge badge--gold">Golden Key &middot; 2026</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>After receiving an invitation in my first year, I was finally able to afford membership and joined the Golden Key International Honour Society in 2026, completing a milestone that began in 2023.</p><figure class="tl-diagram"><figcaption>Three years in the making</figcaption><ol class="flow"><li>Invited &middot; 2023</li><li>Joined &middot; 2026</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event tl-event--major">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5a2 2 0 0 0 0 4h1"/><path d="M16 6h3a2 2 0 0 1 0 4h-1"/><path d="M10 14h4"/><path d="M9 20h6"/><path d="M12 14v6"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">National competition</span>
+      <h4>MICT SETA National Skills Challenge</h4>
+      <p class="tl-hook">ThethaNam took us to first in the province and second in the country.</p>
+      <ul class="tl-badges"><li class="badge badge--gold">1st &middot; Provincial</li><li class="badge badge--gold">2nd &middot; National</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>On 20&ndash;21 March 2026, three of my classmates, a friend we made at the event and I took part in the MICT SETA National Skills Challenge Hackathon. We developed ThethaNam, a user-experience-centred web application designed to bridge the gap between graduates and available opportunities in the Eastern Cape.</p><p>We placed first in the provincial competition. The top three teams from each participating province travelled to WeWork Rosebank in Johannesburg for the national grand finale on 30&ndash;31 March 2026, where we placed second nationally.</p><figure class="tl-diagram"><figcaption>Two-stage result</figcaption><ol class="ranks"><li class="rank rank--1"><span class="rank-num">1st</span><span class="rank-title">Provincial challenge</span><span class="rank-sub">20&ndash;21 March 2026</span></li><li class="rank rank--2"><span class="rank-num">2nd</span><span class="rank-title">National grand finale</span><span class="rank-sub">WeWork Rosebank, Johannesburg &middot; 30&ndash;31 March 2026</span></li></ol></figure><figure class="tl-diagram"><figcaption>The gap ThethaNam addresses</figcaption><ol class="flow"><li>Eastern Cape graduates</li><li>ThethaNam</li><li>Available opportunities</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event tl-event--major">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M19 20a6 6 0 0 0-3-5.2"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Leadership &middot; Samsung</span>
+      <h4>Samsung Innovation Campus</h4>
+      <p class="tl-hook">Inaugural cohort. Project Manager and Team Leader. Second place.</p>
+      <ul class="tl-badges"><li class="badge badge--role">Project Manager &amp; Team Leader</li><li class="badge badge--gold">2nd &middot; SIC hackathon</li><li class="badge badge--neutral">Top 2 in programme</li><li class="badge badge--neutral">The Herald &amp; Samsung Newsroom</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In early March 2026, applications opened for the inaugural Samsung Innovation Campus cohort at Nelson Mandela University, brought by the Mandela University Africa Hub. I applied and was accepted, and the programme began in April.</p><p>On 20 July 2026 participants received a hackathon challenge, with one week to address one of two problem statements. I was selected as Project Manager and Team Leader. We received Samsung&rsquo;s problem statement: build SIC Connect, an alumni portal to help Samsung Innovation Campus graduates stay connected and access opportunities in the Samsung network. My team placed second.</p><p>I also ranked among the top two students in the programme, and made my first press appearances, in The Herald and on Samsung Newsroom South Africa, alongside a fellow participant.</p><figure class="tl-diagram"><figcaption>Programme timeline</figcaption><ol class="flow"><li>Applications &middot; Mar 2026</li><li>Programme starts &middot; Apr</li><li>Hackathon &middot; 20 Jul</li><li>2nd place</li></ol></figure><figure class="tl-diagram"><figcaption>What SIC Connect does</figcaption><ol class="flow"><li>SIC graduates</li><li>SIC Connect</li><li>Alumni network + opportunities</li></ol></figure><figure class="tl-diagram"><figcaption>Hackathon result</figcaption><ol class="ranks"><li class="rank rank--2"><span class="rank-num">2nd</span><span class="rank-title">SIC hackathon</span><span class="rank-sub">SIC Connect &middot; July 2026</span></li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event tl-event--major">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Full circle</span>
+      <h4>Becoming an SI Leader</h4>
+      <p class="tl-hook">From learner to leader, in the module that once challenged me.</p>
+      <ul class="tl-badges"><li class="badge badge--role">From learner to leader</li></ul>
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>In the second semester of 2026 I began facilitating Supplemental Instruction sessions for Introduction to Automation. The module that once challenged me became my opportunity to support other students, and the role has grown my communication, leadership, time-management and teamwork skills.</p><figure class="tl-diagram"><figcaption>Full circle</figcaption><ol class="flow flow--cycle"><li>Struggled with the module</li><li>Improved to top two</li><li>Selected as SI Leader</li><li>Helping other students</li></ol></figure></div>
+    </details>
+  </article>
+</li><li class="tl-event tl-event--current tl-event--major">
+  <span class="tl-node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4 3 7 7 8 4-1 7-4 7-8V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+  <article class="tl-card">
+    <div class="tl-card-head">
+      <span class="tl-tag">Current &middot; postgraduate</span><span class="tl-current">I am here</span>
+      <h4>Postgraduate Diploma in Cybersecurity</h4>
+      <p class="tl-hook">Where my journey stands today.</p>
+      
+    </div>
+    <details class="tl-more"><summary><span class="tl-more-open">Read more</span><span class="tl-more-close">Show less</span></summary>
+      <div class="tl-detail"><p>I was accepted into the Postgraduate Diploma in Cybersecurity at Nelson Mandela University, which began in February 2026. It is the next stage of my journey: building on my software development foundation while deepening my knowledge of information security, cyber defence, governance and secure technology.</p><figure class="tl-diagram"><figcaption>What I am bringing together</figcaption><div class="hub"><span class="hub-core">Secure, practical technology</span><ul class="hub-spokes"><li>Software development foundation</li><li>Information security</li><li>Cyber defence</li><li>Governance</li></ul></div></figure></div>
+    </details>
+  </article>
+</li>
+  </ol>
+</li>
+
+        </ol>
+        <article class="journey-continues">
+  <h3>The journey continues</h3>
+  <p>My journey began in 2020 with Java, a steep learning curve and a determination not to give up. Since then I have grown into a software developer, collaborated on practical technology solutions, competed on national stages, led a hackathon team and helped other students through Supplemental Instruction.</p>
+  <p>Today, as I pursue my Postgraduate Diploma in Cybersecurity, I am bringing these experiences together with a clear ambition: to help build technology that is innovative, secure and meaningful to the people who use it.</p>
+  <p>I am still learning, still building, and still pushing beyond what I thought was possible.</p>
+  <figure class="tl-diagram"><figcaption>Where it leads</figcaption><ol class="flow flow--growth"><li>Resilience</li><li>Development</li><li>Innovation</li><li>Leadership</li><li>Cybersecurity</li></ol></figure>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#work">See my projects</a>
+    <a class="btn btn-quiet" href="#contact">Get in touch</a>
+  </div>
+</article>
+      </div>
     </section>
 
     <!-- Roadmap -->
@@ -501,6 +785,16 @@
           </ul>
         </li>
       </ol>
+    </section>
+
+    <!-- Why work with me -->
+    <section class="why-me" id="why-me" aria-labelledby="why-me-title">
+      <h2 id="why-me-title">Why work with me?</h2>
+      <div class="prose">
+        <p>I bring together a developer’s mindset, a cybersecurity perspective, and a genuine drive to solve problems that matter. My background in Information Technology has taught me to build solutions, think critically, and approach challenges with curiosity. My cybersecurity journey has strengthened my understanding that technology must be not only innovative, but also secure and trustworthy.</p>
+        <p>I may still be at the beginning of my professional journey, but I bring a willingness to learn, the discipline to improve, and the determination to turn challenges into opportunities. Through projects, hackathons, and collaborative experiences, I have learned to take initiative, work with others, and keep pushing beyond what I already know.</p>
+        <p>I am not looking for just a job; I am looking for an opportunity to contribute, grow, and prove what I can bring to the team. I bring technical curiosity, a security-conscious mindset, and the ambition to make a meaningful impact, and I would welcome the opportunity to connect.</p>
+      </div>
     </section>
 
     <!-- Contact -->
