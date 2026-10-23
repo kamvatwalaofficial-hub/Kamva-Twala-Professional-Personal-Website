@@ -719,3 +719,18 @@ main h2::after {
   .site-header, .brand-badge, .site-header nav a, .site-header nav a::after, .menu-icon,
   .menu-icon::before, .menu-icon::after { transition: none; }
 }
+
+/* ------------------------------------------------------------ 404 page */
+.notfound {
+  grid-template-columns: 1fr;
+  min-height: calc(100vh - 12rem); min-height: calc(100dvh - 12rem);
+  align-content: center;
+}
+.notfound .hero-text { max-width: 40rem; }
+.notfound-code {
+  font-family: var(--mono); font-weight: 500; line-height: 1;
+  font-size: clamp(4.5rem, 18vw, 9rem); letter-spacing: -0.04em;
+  color: transparent; -webkit-text-stroke: 1.5px var(--scan);
+  margin-bottom: 1rem;
+}
+.notfound h1 { font-size: var(--step-3); }
